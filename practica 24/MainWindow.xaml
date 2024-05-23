@@ -1,0 +1,28 @@
+﻿<Window x:Class="practica_24.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:practica_24"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Добавьте здесь элементы управления для отображения и управления сущностями -->
+        <DataGrid x:Name="dataGrid" Grid.Row="1" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Student ID" Binding="{Binding StudentId}"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button Content="Добавить" Click="AddButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10"/>
+        <Button Content="Удалить" Click="DeleteButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="90,10,0,0"/>
+        <Button Content="Редактировать" Click="EditButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="190,10,0,0"/>
+        <Button Content="Обновить" Click="RefreshButton_Click" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="310,10,0,0"/>
+    </Grid>
+</Window>
